@@ -488,7 +488,9 @@
         </div>
     </div>
 </section>
-<footer>
+
+<!-- English Footer -->
+<footer id="footer-en">
     <div class="footer-container">
         <div class="footer-logo">
             <h2>FinWise</h2>
@@ -503,15 +505,38 @@
         </div>
     </div>
     <div class="footer-bottom">
-        <p>&copy; 2024 FinWise. All Rights Reserved. <br>Contact us: info@finwise.com</p>
+        <p>&copy; 2024 FinWise. All Rights Reserved.<br>Contact us: info@finwise.com</p>
     </div>
 </footer>
+
+<!-- Arabic Footer -->
+<footer id="footer-ar" style="display: none;" lang="ar">
+    <div class="footer-container">
+        <div class="footer-logo">
+            <h2>FinWise</h2>
+            <p>رفيقك الذكي المالي</p>
+        </div>
+        <div class="footer-social">
+            <h3>تابعنا</h3>
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 FinWise. جميع الحقوق محفوظة.<br>اتصل بنا: info@finwise.com</p>
+    </div>
+</footer>
+
 <script>
     function toggleLanguage() {
         const englishContent = document.getElementById('english-content');
         const arabicContent = document.getElementById('arabic-content');
         const registrationEn = document.getElementById('registration-en');
         const registrationAr = document.getElementById('registration-ar');
+        const footerEn = document.getElementById('footer-en');
+        const footerAr = document.getElementById('footer-ar');
         const buttons = document.querySelectorAll('.language-toggle');
 
         if (englishContent.style.display === "none") {
@@ -519,6 +544,8 @@
             arabicContent.style.display = "none";
             registrationEn.style.display = "block";
             registrationAr.style.display = "none";
+            footerEn.style.display = "block";
+            footerAr.style.display = "none";
             buttons.forEach(button => {
                 button.textContent = "Switch to Arabic";
             });
@@ -527,13 +554,14 @@
             arabicContent.style.display = "block";
             registrationEn.style.display = "none";
             registrationAr.style.display = "block";
+            footerEn.style.display = "none";
+            footerAr.style.display = "block";
             buttons.forEach(button => {
                 button.textContent = "انتقل الى اللغه الانجليزية";
             });
         }
     }
 </script>
-
 
 </body>
 </html>
