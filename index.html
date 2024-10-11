@@ -352,6 +352,7 @@
             .features {
                 flex-direction: column;
                 align-items: center;
+                font-size: 10ch;
             }
 
             .feature {
@@ -424,8 +425,79 @@
                 margin: 0 8px;
             }
         }
+    
+
+        h1 {
+            margin: 0;
+        }
+
+        .cta-button {
+            background-color: #224e87;
+            color: white;
+            padding: 18px 36px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.3rem;
+            margin-top: 25px;
+        }
+
+        .cta-button:hover {
+            background-color: #9997fa;
+        }
+
+        .registration-form {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 30px auto;
+        }
+
+        .registration-form input, .registration-form button {
+            width: 100%;
+            padding: 18px;
+            margin: 12px 0;
+            font-size: 1.1rem;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .registration-form button {
+            background-color: #224e87;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .registration-form button:hover {
+            background-color: #9997fa;
+        }
+        /* Styles for the Image Section */
+        .image-section {
+    padding: 40px 20px;  /* Adds padding around the section */
+    text-align: center;  /* Centers the content */
+    margin-bottom: 40px;  /* Ensures space below the section before the video section */
+}
+
+.image-placeholder {
+    display: flex;
+    justify-content: center; /* Centers the image horizontally */
+}
+
+.image-placeholder img {
+    width: 70%;  /* Makes the image 60% of the container's width */
+    max-width: auto;  /* Ensures the image doesn't exceed 400px on large screens */
+    height: auto;  /* Keeps the image aspect ratio */
+    border-radius: 10px;  /* Adds rounded corners to the image */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  /* Adds a soft shadow around the image */
+    margin: 0 auto;  /* Centers the image horizontally */
+}
+
+
+
     </style>
-</head>
 <body>
 
 <!-- English Content -->
@@ -442,10 +514,24 @@
         <a href="#registration" class="cta-button">Join FinWise Now</a>
     </div>
 
-    <!-- Image Placeholder Before Features -->
-    <div class="image-placeholder">
-        <!-- Replace 'path-to-your-image.jpg' with the actual image path -->
-    </div>
+
+    
+
+    <section class="video-section">
+        <h2>Watch Our Video</h2>
+        <iframe src="https://youtu.be/rOujjxKu4fA?si=jE7hxnL6A6CTyW7o" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+        </iframe>
+    </section>
+
+
+    <section class="image-section">
+        <!-- Image Placeholder Before Features (Arabic) -->
+        <div class="image-placeholder">
+            <img src="imges/Persona.png" alt="Persona Image">
+        </div>
+    </section>
 
     <section>
         <h2>Why Choose FinWise?</h2>
@@ -480,10 +566,21 @@
         <a href="#registration" class="cta-button">انضم إلى FinWise الآن</a>
     </div>
 
-    <!-- Image Placeholder Before Features (Arabic) -->
-    <div class="image-placeholder">
-        <!-- Replace 'path-to-your-image.jpg' with the actual image path -->
-    </div>
+    <section class="image-section">
+        <!-- Image Placeholder Before Features (Arabic) -->
+        <div class="image-placeholder">
+            <img src="imges/Persona.png" alt="Persona Image">
+        </div>
+    </section>
+    
+
+    <section class="video-section" lang="ar">
+        <h2>شاهد الفيديو الخاص بنا</h2>
+        <iframe src="https://youtu.be/rOujjxKu4fA?si=jE7hxnL6A6CTyW7o" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+        </iframe>
+    </section>
 
     <section lang="ar">
         <h2>لماذا تختار FinWise؟</h2>
@@ -507,22 +604,21 @@
 <!-- Registration Section (Single) -->
 <section id="registration">
     <!-- English Registration Content -->
-    <div id="registration-en">
-        <div class="registration-form">
-            <h3>Register Now for Early Access</h3>
-            <form action="your-server-endpoint" method="POST">
-                <input type="text" name="name" placeholder="Full Name" required>
-                <input type="email" name="email" placeholder="Email Address" required>
-                <button type="submit">Join FinWise</button>
-            </form>
-        </div>
+    <div class="registration-form">
+        <h3>Register Now for Early Access</h3>
+        <form action="save_email.php" method="POST">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <button type="submit">Join FinWise</button>
+        </form>
     </div>
+    
 
     <!-- Arabic Registration Content -->
     <div id="registration-ar" style="display: none;" class="arabic">
         <div class="registration-form">
             <h3>سجل الآن للحصول على تنبية عند انطلاق المنتج</h3>
-            <form action="your-server-endpoint" method="POST">
+            <form action="save_email.php" method="POST">
                 <input type="text" name="name" placeholder="الاسم الكامل" required>
                 <input type="email" name="email" placeholder="عنوان البريد الإلكتروني" required>
                 <button type="submit">انضم إلى FinWise</button>
